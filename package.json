@@ -1,0 +1,31 @@
+{
+  "author": "David Oliveira <d.oliveira@prozone.org>",
+  "name": "secretagent",
+  "description": "A socket-based messaging system with `automatic failover`",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidfoliveira/node-secretagent/"
+  },
+  "main": "./lib/secretagent",
+  "bin": {
+    "replaceme": "./bin/manager.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "license": "Copyleft",
+  "engines": {
+    "node": ">=0.10.5"
+  },
+  "keywords": [
+    "secret",
+    "agent",
+    "agents",
+    "socket",
+    "sockets",
+    "message",
+    "messaging",
+    "failover"
+  ]
+}
