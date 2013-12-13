@@ -24,7 +24,13 @@ for ( var x = 4 ; x < process.argv.length ; x++ ) {
 
 
 // Create the secretagent
-secretagent = new SecretAgent(name.toUpperCase(),{DEBUG:10});
+secretagent = new SecretAgent(name.toUpperCase(),{});
+secretagent.on('meet',function(who){
+	console.log("Just met ",who);
+});
+secretagent.on('loose',function(who){
+	console.log("Just lost ",who);
+});
 secretagent.on('message',function(message,from,to,directFrom){
 	console.log("Got a message for me (from "+from+", direct from: "+directFrom+"): ",message);
 });
@@ -35,7 +41,7 @@ secretagent.createServer(listenPort);
 // Connect to remove server
 if ( connectTo.length > 0 ) {
 	connectTo.forEach(function(dest){
-		secretagent.connect(dest.port,dest.host);
+		secretagent.connect({host: dest.host, port: dest.port});
 	});
 }
 
