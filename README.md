@@ -9,7 +9,7 @@ The connections will be `France->America`, `America->Britain`, `Britain->CCCP`, 
 
 When `France` wants to send a message to `America`, will use the connection that they have in common (`France->America`), when `Britain` wants to send a message to `America`, will use the connection that they have in common (`America->Britain`) and so on...
 
-Everything works just fine until they experience some network problems. Let's suppose that exists a network problem cutting the connection `France->CCCP`. When `France` emits a message to `CCCP` will realize that this connection is down, so they need to search for an allied that still have connection with `CCCP` for delivering that message. On this case, the message will be sent to `America` that will deliver directly to `CCCP`. If the connection between `America` and `CCCP` goes down too, the connection is still possible on this way: `France->America->Britain->CCCP`.
+Everything works just fine until they experience some network problems. Let's suppose that exists a network problem cutting the connection `France->CCCP`. When `France` emits a message to `CCCP` will realize that this connection is down, so they need to search for an allied that still has connection with `CCCP` for delivering that message. On this case, the message will be sent to `America` that will deliver directly to `CCCP`. If the connection between `America` and `CCCP` goes down too, the connection is still possible on this way: `France->America->Britain->CCCP`.
 
 # Installing
 
@@ -59,7 +59,7 @@ Everything works just fine until they experience some network problems. Let's su
 
 	},1000);
 
-	Of course that the ideia is using this on multiple processes/machines/soviets.
+Of course that the ideia is using this on multiple processes/machines/soviets.
 
 # The API
 
