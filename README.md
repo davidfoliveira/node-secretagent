@@ -59,7 +59,7 @@ Everything works just fine until they experience some network problems. Let's su
 
 	},1000);
 
-Of course that the ideia is using this on multiple processes/machines/soviets.
+Of course that the ideia is to use this on multiple processes/machines/soviets.
 
 # The API
 
@@ -106,6 +106,20 @@ Returns the member object having the supplied direct (with direct connection) me
 ### everybody()
 
 Returns an array with every direct member.
+
+## The `SecretAgent` events:
+
+### on('message',function(message,from,to,directlyFrom){})
+
+Fired when a new message arrive.
+
+### on('meet',function(memberName){})
+
+Fired when the agent meets another agent, directly on indirectly.
+
+### on('loose',function(memberName){})
+
+Fired when the agent looses the connection with another agent, directly or indirectly.
 
 
 # TODO
